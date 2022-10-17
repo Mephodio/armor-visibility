@@ -46,18 +46,18 @@ public class ArmorVisibilityClient {
                 client.player.playSound(SoundEvents.TRIPWIRE_CLICK_ON, 0.5f, 1.0f);
 
                 if (client.player.isShiftKeyDown()) {
-                    ArmorVisibility.saveFile.hideAllArmorToggle = true;
-                    client.player.displayClientMessage(Component.translatable(
-                            "message." +
-                                    ArmorVisibility.MOD_ID +
-                                    ".hide_all_armor"
-                    ), true);
-                } else {
                     ArmorVisibility.saveFile.hideMyArmorToggle = true;
                     client.player.displayClientMessage(Component.translatable(
                             "message." +
                                     ArmorVisibility.MOD_ID +
                                     ".hide_my_armor"
+                    ), true);
+                } else {
+                    ArmorVisibility.saveFile.hideAllArmorToggle = true;
+                    client.player.displayClientMessage(Component.translatable(
+                            "message." +
+                                    ArmorVisibility.MOD_ID +
+                                    ".hide_all_armor"
                     ), true);
                 }
             }
